@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+
+        <label for="">Name:
+            <input type="text" id="name">
+        </label><br><br>
+
+        <label for="">Gender:
+            <input type="radio" value="male" id="gender">Male
+            <input type="radio" value="female" id="gender">Female
+        </label><br><br>
+
+        <label for="">Address:
+            <textarea id="address"></textarea>
+        </label><br><br>
+
+        <label for="">Education:
+            <select id="education">
+                <option>...</option>
+                <option value="Matric">Matric</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Graduate">Graduate</option>
+                <option value="Masters">Masters</option> 
+            </select>
+        </label><br><br>
+
+        <label for="">Profession:
+            <select id="profession">
+                <option>...</option>
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="Web & App Develope">Web & App Developer</option>
+                <option value="Hybrid App Developer">Hybrid App Developer</option> 
+            </select>
+        </label><br><br>
+
+        <label for="">
+            <input type="button" value="Submit" onclick="submitData()">
+        </label>
+    </form>
+
+    <script>
+
+        //4  
+        function submitData(){
+            var name = document.getElementById("name").value
+            var gender = document.getElementById("gender").value
+            var address = document.getElementById("address").value
+            var education = document.getElementById("education").value
+            var profession = document.getElementById("profession").value
+
+            function CheckPopulation(name, gender, address, education, profession){
+                this.name = name;
+                this.gender = gender;
+                this.address = address;
+                this.education = education;
+                this.profession = profession;
+            }
+            var result = new CheckPopulation(name, gender, address, education, profession)
+            console.log(result);
+        }
+        
+
+
+        // //1
+        // var itemsArray = [
+        //     {
+        //     name  : "juice",
+        //     price : "50",
+        //     quantity : "3"
+        // },
+
+        // {
+        //     name  : "cookie",
+        //     price : "30",
+        //     quantity : "9"
+        // },
+        
+        // {
+        //     name  : "shirt",
+        //     price : "880",
+        //     quantity : "1"
+        // },
+
+        // {
+        //     name  : "pen",
+        //     price : "100",
+        //     quantity : "2"
+        // }
+        // ];
+        // var item1 = (itemsArray[0].price*itemsArray[0].quantity);
+        // var item2 = (itemsArray[1].price*itemsArray[1].quantity);
+        // var item3 = (itemsArray[2].price*itemsArray[2].quantity);
+        // var item4 = (itemsArray[3].price*itemsArray[3].quantity); 
+
+        // var allItems = (item1+item2+item3+item4);
+        // console.log(item1);
+        // console.log(item2);
+        // console.log(item3);
+        // console.log(item4);
+        // console.log(allItems);
+        
+
+        // //2
+        // var personalInfo = [
+        //     {
+        //         name  : "Zahak",
+        //         email : "zahak@gmail.com",
+        //         password : "*****",
+        //         age : "20",
+        //         gender : "male",
+        //         city : "karachi",
+        //         country : "pakistan"
+        //     }
+        // ];
+        // if("age" in personalInfo && "country" in personalInfo){
+        //     console.log("age and country exist");
+        // }
+        // else{
+        //     console.log("age and country not exist");
+        // }
+
+//         //3
+//         function Student(firstname, lastname, area){
+//             this.firstname = firstname;
+//             this.lastname = lastname;
+//             this.area = area;
+//         }
+//         var info = new Student("sunaif", "shaikh", "Gulshan");
+//         var info1 = new Student("sunaif1", "shaikh1", "Gulshan1");
+//         var info2 = new Student("sunaif2", "shaikh2", "Gulshan2");
+// console.log(info.area);
+// console.log(info1.area);
+// console.log(info2.area);
+
+    </script>
+    
+    
+</body>
+
+</html>
+
